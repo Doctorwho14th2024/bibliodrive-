@@ -1,0 +1,25 @@
+# Configuration files
+includes/database.php
+
+# IDE files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+
+# Vendor directories
+vendor/
+
+# Environment files
+.env
+*.env
+
+# User uploaded content
+uploads/
+images/

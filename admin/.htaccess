@@ -1,0 +1,6 @@
+Options -Indexes
+DirectoryIndex index.php
+
+# Rediriger toutes les erreurs 403 et 404 vers index.php
+ErrorDocument 403 /biblio/admin/index.php
+ErrorDocument 404 /biblio/admin/index.php

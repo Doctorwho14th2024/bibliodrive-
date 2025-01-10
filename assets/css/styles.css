@@ -1,0 +1,220 @@
+:root {
+    --neon-blue: #4f46e5;
+    --neon-cyan: #0ea5e9;
+    --neon-green: #10b981;
+    --darker-bg: #0f172a;
+    --dark-surface: #1e293b;
+    --text-light: #f8fafc;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--darker-bg);
+    color: var(--text-light);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Message d'en-tête */
+.header-message {
+    background-color: var(--dark-surface);
+    color: var(--text-light);
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--neon-blue);
+}
+
+/* Barre de recherche */
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--dark-surface);
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    margin-right: 1rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid var(--neon-blue);
+    border-radius: 4px 0 0 4px;
+    background: var(--darker-bg);
+    color: var(--text-light);
+}
+
+.search-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--neon-blue);
+    border: 1px solid var(--neon-blue);
+    border-radius: 0 4px 4px 0;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: var(--neon-cyan);
+}
+
+/* Panier */
+.cart-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--dark-surface);
+    border: 1px solid var(--neon-blue);
+    border-radius: 4px;
+    color: var(--text-light);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart-button:hover {
+    background: var(--neon-blue);
+    color: var(--text-light);
+}
+
+/* Liste des livres */
+.books-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.books-list {
+    flex: 1;
+    background: var(--dark-surface);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--neon-blue);
+}
+
+.book-item {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.book-item:last-child {
+    border-bottom: none;
+}
+
+.book-item a {
+    color: var(--text-light);
+    text-decoration: none;
+    display: block;
+}
+
+.book-item a:hover {
+    color: var(--neon-cyan);
+}
+
+/* Formulaire de connexion */
+.login-container {
+    width: 300px;
+    background: var(--dark-surface);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--neon-blue);
+}
+
+.login-title {
+    color: var(--text-light);
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--neon-blue);
+    border-radius: 4px;
+    background: var(--darker-bg);
+    color: var(--text-light);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+}
+
+.login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--neon-blue);
+    border: none;
+    border-radius: 4px;
+    color: var(--text-light);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-button:hover {
+    background: var(--neon-cyan);
+}
+
+/* Messages d'alerte */
+.alert {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+.alert-success {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: var(--neon-green);
+    color: var(--neon-green);
+}
+
+.alert-danger {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .books-container {
+        flex-direction: column;
+    }
+
+    .login-container {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .cart-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
