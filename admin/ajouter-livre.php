@@ -1,5 +1,8 @@
 <?php
 require_once '../includes/header.php';
+
+// MODIFICATIONS
+
 requireAdmin(); // S'assure que seuls les administrateurs peuvent accéder à cette page
 
 // Créer le dossier des couvertures s'il n'existe pas
